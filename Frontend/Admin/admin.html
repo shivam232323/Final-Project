@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonyous"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./admin.css">
+
+</head>
+<body>
+    <nav role="navigation" class="navbar navbar-expand-lg ml-auto " style="background-color: #e3f2fd;">
+        <a class = "navbar-brand">JOB_PORTAL</a>
+    <div class="collapse justify-content-between navbar-collapse d-flex" >
+      <ul class="nav navbar-nav  navbar-right">
+        <li class="nav-item active">
+          <a class="nav-link" onclick="displayJobs()">Posted Jobs</a>
+        </li>
+        <li class="nav-item">
+            <div id="box">
+          <a class="nav-link"  id = "post" >Post Job</a>
+          <form id="form">
+            <div class="container py-md-5">
+                <div class="col-lg-7 pl-lg-5 pb-3 py-lg-5">
+                    <h1 class="display-5">Post Job</h1>
+                    <form action="" method="POST" id="registration-form">
+                     
+                    </div>
+                    <div class="form-group" id="companyName">
+                      <label for="companyname" class="text-muted mb-1"
+                        ><small>Company Name</small></label
+                      >
+                      <input
+                        name="companyName"
+                        id="company-name"
+                        class="form-control"
+                        type="text"
+                        placeholder="Enter your Company Name"
+                        autocomplete="off"
+                      />
+                    </div>
+                      <div class="form-group">
+                        <label for="title" class="text-muted mb-1"
+                          ><small>Designation</small></label
+                        >
+                        <input
+                          name="title"
+                          id="designation"
+                          class="form-control"
+                          type="text"
+                          placeholder="Enter Job title"
+                          autocomplete="off"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label for="description" class="text-muted mb-1"
+                          ><small>Description</small></label
+                        >
+                        
+                         <textarea rows="2" cols="120" name="comment" form="usrform" id ="description" 
+                             placeholder="Enter Job description">
+                           </textarea>
+                       
+                        
+                      </div>
+                      <div class="form-group" id="Job-location">
+                        <label for="job-location" class="text-muted mb-1"
+                          ><small>JOB LOCATION</small></label
+                        >
+                        <input
+                          name="job-location"
+                          id="job-locations"
+                          class="form-control"
+                          type="text"
+                          placeholder="Enter Job Location"
+                          autocomplete="off"
+                        />
+                      </div>
+                      
+                      <div class="form-group" id="hr-email">
+                        <label for="hr-email" class="text-muted mb-1"
+                          ><small>Hr Email</small></label
+                        >
+                        <input
+                          name="hr-email"
+                          id="hr"
+                          class="form-control"
+                          type="email"
+                          placeholder="Enter hr email id"
+                          autocomplete="off"
+                        />
+                      </div>
+                      
+
+                      
+
+                      <button
+                        type="submit"
+                        class="py-3 mt-4 btn btn-lg btn-success btn-block"
+                        id  = "post-job"
+                      >
+                        Post Job
+                      </button>
+                      
+            
+                    </form>
+                </div>
+                </div>
+            </div>
+          </form>
+          
+       
+          </div>
+        
+        
+          <li class="nav-item dropdown" style="list-style: none;">
+            <a class="nav-link dropdown-toggle"  id="Logout" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              username
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" id="Signout">Logout</a>
+            </div>
+        </li>
+            
+           
+        
+        </ul>
+    </div>
+    </nav>
+
+   
+    <div id = "jobs" >
+  </div>
+
+  <!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Applicants</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+  <table id ="main1">
+    <tr>
+      <th id = "applicant">Applicant Name</th>
+      <th id ="email">email</th>
+      <th id ="college">college Name</th>
+      <th id ="year">graduation year</th>
+      <th id ="skill">skills</th>
+    </tr>
+  </table>
+  <table id ="main">
+  </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<script src="./admin.js"></script>
+</html>

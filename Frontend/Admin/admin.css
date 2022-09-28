@@ -1,0 +1,140 @@
+body
+{
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+
+}
+#box {
+    padding:5px;
+    width:200px;
+    z-index:10;
+    position:relative;  
+  }
+  #box form {
+   background:#e3e8df;
+   width: 1000px;
+   padding:5px;
+   display:none;
+   position:absolute;
+   top:100px;
+   text-transform: uppercase;
+   
+
+  }
+
+  #test
+  {
+     text-transform: uppercase;
+     border: 1px solid rgb(144, 144, 197);
+     width:auto;
+     height: 250px;
+     background-color:ghostwhite;
+  }
+
+  #h3
+  {
+    color: black;
+    text-align: center;
+  }
+
+  #jobs button
+  {
+    display: flex;
+    float:right;
+    position: relative;
+    bottom: 60px;
+  }
+
+  #companyname
+  {
+    text-align: center;
+    
+  }
+
+  #posted
+  {
+    position: relative;
+    top: 5px;
+  }
+
+  #hremail
+  {
+    position: relative;
+    left: 250px;
+    top: 30px;
+  }
+  #location
+  {
+    position: relative;
+
+  }
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 12px;
+    text-transform: uppercase;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #309583;
+  }
+  
+  
+
+  .modal-content
+  {
+    width: max-content;
+  }
+
+  #applicant
+  {
+    column-width: 510px;
+
+  }
+  #email
+  {
+    text-align: center;
+    column-width: 700px;
+
+  }
+
+  #logout
+  {
+    text-transform: uppercase;
+    color:whitesmoke;
+  }
+
+  
+#text1
+{
+  position: relative;
+  top: 0px;
+}
+
+
+#text2
+{
+  position: relative;
+  bottom: 25px;
+}
+
+#date
+{
+  position: relative;
+  bottom: 55px;
+}
+
+#test
+{
+  padding: 2px;
+}
+  
+  
+  

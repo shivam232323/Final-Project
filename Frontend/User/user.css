@@ -1,0 +1,199 @@
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+
+}
+
+/* Style tab links */
+.tablink {
+  background-color: rgb(105, 184, 218);
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 5px;
+  height: 100%;
+}
+
+#Home {
+  background-color:white;
+  border: 2px solid white;
+  height: fit-content;
+}
+#News {background-color: rgb(50, 130, 55)}
+#Contact {background-color: rgb(185, 124, 124);}
+
+
+
+#test
+{
+
+   margin-top: -80px;
+   margin-left: -19px;
+   text-transform: uppercase;
+   order: 1px solid rgb(144, 144, 197);    
+   height: 370px;
+   background-color:rgb(125, 125, 178);
+    padding: 20px;
+  }
+
+#h3
+{
+  color: black;
+  text-align: center;
+}
+
+#Home button
+{
+   position: relative;
+   left: 1350px;
+   bottom: 5px;
+}
+
+#companyname
+{
+  text-align: center;
+  
+}
+
+#posted
+{
+  position: relative;
+  top: 40px;
+}
+
+#hremail
+{
+  position: relative;
+  left: 250px;
+  top: 69px;
+}
+
+
+#title
+{
+  padding: 16px;
+}
+
+
+body
+{
+    background-color: antiquewhite;
+
+}
+#tab{
+    display: flex;
+    justify-content: center;
+    padding: 150px;
+    text-transform: uppercase;
+    text-align: center;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  top: 75px;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 12px;
+  
+}
+
+tr:nth-child(even) {
+  background-color: #309583;
+}
+
+#company
+{
+  width: 520px;
+  text-align: center;
+}
+#des
+{
+  width: 520px;
+  text-align: center;
+}
+
+#loc
+{
+  text-align: center;
+
+}
+
+p{
+  margin-left: 15px;
+  position: relative;
+  top: 5px;
+  
+}
+
+#Skills
+{
+  position: relative;
+  top: 25px;
+}
+
+#gradyear
+{
+  padding: 25px;
+}
+
+#submit
+{
+  position: relative;
+  top: 35px;
+  
+}
+
+
+#text1
+{
+  position: relative;
+  top: 60px;
+}
+
+
+#text2
+{
+  position: relative;
+  top: 28px;
+}
+
+#job
+{
+  position: relative;
+  top: 50px;
+  padding: 10px;
+}
+
+#exit
+{
+  text-transform: uppercase;
+  position: relative;
+  top: 35px;
+  left: 10px;
+}
+
+

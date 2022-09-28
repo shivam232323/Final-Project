@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonyous"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+    <link rel="stylesheet" href="user.css">
+
+    <title>Document</title>
+</head>
+<body>
+  <div class="fixed-top">
+
+    <h2 class="tablink" id = "title">Job-Portal</h2>
+    <button class="tablink" onclick="openPage('Home', this, 'rgb(125, 125, 178)')" id="defaultOpen">Jobs</button>
+<button class="tablink" onclick="openPage('News', this, 'green');jobsApplied()" >Applied Jobs</button>
+<button class="tablink" id = "About" onclick="openPage('Contact', this, 'rgb(185, 124, 124)')">User Email</button>
+</div>
+<div id="Home" class="tabcontent">
+    
+  </div>
+
+<div id="News" class="tabcontent">
+ 
+<div >
+  <table id ="main1">
+    <tr>
+      <th id = "company">Company</th>
+      <th id ="des">Designation</th>
+      <th id ="loc">Job Location</th>
+    </tr>
+  </table>
+  <table id ="main">
+  </table>
+
+</div>
+</div>
+
+<div id="Contact" class="tabcontent">
+  <button type="button" class="btn btn-outline-danger btn-lg" id="logout">Logout</button>
+
+  <form class="row g-3">
+    
+    <div class="col-md-6">
+      <label for="inputPassword4" class="form-label">FirstName</label>
+      <input type="text" class="form-control" id="firstname">
+    </div>
+    
+    <div class="col-md-6">
+      <label for="inputPassword4" class="form-label">LastName</label>
+      <input type="text" class="form-control" id="Lastname">
+    </div>
+    <div class="col-md-6">
+      <label for="inputEmail4" class="form-label">Email</label>
+      <input type="email" class="form-control" id="Email">
+    </div>
+    
+    <div class="col-md-6">
+      <label for="inputPassword4" class="form-label">College Name</label>
+      <input type="text" class="form-control" id="College">
+    </div>
+    
+
+    
+     
+    
+    <div class="col-md-6">
+      <label for="inputPassword4" class="form-label">SSC Percentage</label>
+      <input type="text" class="form-control" id="SSC">
+    </div>
+    
+    <div class="col-md-6">
+      <label for="inputPassword4" class="form-label">HSC Percentage</label>
+      <input type="text" class="form-control" id="HSC">
+    </div>
+    
+    <div class="col-md-6">
+      <label for="inputPassword4" class="form-label">Gradutation Percentage</label>
+      <input type="text" class="form-control" id="Graduatation">
+    </div>
+
+
+    <div class="col-md-6" id ="gradyear">
+
+    <select class="form-select" aria-label="Default select example" id  = "yearSelect">
+      <option selected>Gradutation Year</option>
+      <option value="2020">2020</option>
+      <option value="2021">2021</option>
+      <option value="2022">2022</option>
+    </select>
+
+    </div>
+    <br>
+    <p>Enter Your Skills Here</p>
+ <br> 
+<textarea rows="4" cols="50" name="comment" form="usrform" id ="Skills">
+  </textarea>
+  
+
+
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary" id = "submit">SUBMIT</button>
+      <button type="button" class="btn btn-outline-danger btn-lg" id="exit">Logout</button>
+
+    </div>
+  </form>
+</div>
+
+
+    
+        <script    src="user.js"></script>
+</body>
+</html>
