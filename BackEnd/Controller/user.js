@@ -272,3 +272,27 @@ exports.appliedJobs = async (req, res) => {
    })
 
 }
+
+
+exports.displayUserDetails = async(req,res) =>
+{
+   const {userId} = req.params;
+   const sql = `select * from user_details where user_id = ${Number(userId)}`;
+
+   const result = await pool.query(sql,(error,response)=>
+   {
+      if(error) throw error;
+      res.json(response);
+   })
+}
+
+exports.checkUserDetails = async(req,res) =>
+{
+   const {userId}= req.params;
+   const sql = `select submited from user_details where user_id = ${Number(userId)}`;
+   const result = await pool.query(sql,(error,response) =>
+   {
+      if(error) throw error;
+      res.json(response);
+   })
+}

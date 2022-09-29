@@ -17,7 +17,7 @@
     <h2 class="tablink" id = "title">Job-Portal</h2>
     <button class="tablink" onclick="openPage('Home', this, 'rgb(125, 125, 178)')" id="defaultOpen">Jobs</button>
 <button class="tablink" onclick="openPage('News', this, 'green');jobsApplied()" >Applied Jobs</button>
-<button class="tablink" id = "About" onclick="openPage('Contact', this, 'rgb(185, 124, 124)')">User Email</button>
+<button class="tablink" id = "About" onclick="openPage('Contact', this, 'rgb(185, 124, 124)');checkUserDetails()">User Email</button>
 </div>
 <div id="Home" class="tabcontent">
     
@@ -41,7 +41,7 @@
 
 <div id="Contact" class="tabcontent">
   <button type="button" class="btn btn-outline-danger btn-lg" id="logout">Logout</button>
-
+  <div id = "userForm">
   <form class="row g-3">
     
     <div class="col-md-6">
@@ -61,11 +61,7 @@
     <div class="col-md-6">
       <label for="inputPassword4" class="form-label">College Name</label>
       <input type="text" class="form-control" id="College">
-    </div>
-    
-
-    
-     
+    </div> 
     
     <div class="col-md-6">
       <label for="inputPassword4" class="form-label">SSC Percentage</label>
@@ -103,10 +99,11 @@
 
     <div class="col-12">
       <button type="submit" class="btn btn-primary" id = "submit">SUBMIT</button>
-      <button type="button" class="btn btn-outline-danger btn-lg" id="exit">Logout</button>
-
     </div>
   </form>
+</div>
+<div id ="submitted">
+  
 </div>
 
 

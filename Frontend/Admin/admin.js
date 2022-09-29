@@ -53,7 +53,7 @@ const addJob = () => {
      // Displaying results to console
      .then(json => {
 
-        console.log(json);
+        alert(json);
 
      }).catch(err => console.log(err))
 

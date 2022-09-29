@@ -36,7 +36,7 @@ exports.addJobs = async (req, res) => {
 
    const details = await pool.query(jobDeatils, (err, result) => {
       if (err) throw err;
-      res.json(result);
+      res.json("Job Added Successfully!");
    })
 
 

@@ -1,7 +1,7 @@
 const userName = localStorage.getItem("Name");
 const role = localStorage.getItem("Role")
 const userId = localStorage.getItem("Id")
-const signOut = document.getElementById("exit");
+const signOut = document.getElementById("logout");
 
 
 signOut.addEventListener('click', function () {
@@ -211,3 +211,84 @@ function openPage(pageName, elmnt, color) {
 
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
+
+
+const checkUserDetails = async () => {
+   const userProfile = document.getElementById("submitted");
+   const userDetailsDiv = document.getElementById("userForm");
+
+   const fetchDetails = await fetch(`http://localhost:1800/checkUserDetails/${userId}`);
+   const jsonData = await fetchDetails.json();
+   if (jsonData[0]) {
+      const userDetails = await fetch(`http://localhost:1800/displayUserDetails/${userId}`);
+      const userJson = await userDetails.json();
+      console.log(userJson);
+      const {
+         firstName,
+         lastName,
+         email,
+         hsc,
+         ssc,
+         graduation,
+         skills
+      } = userJson[0];
+      userDetailsDiv.style.display = "none";
+      const test1 = document.getElementById('Contact');
+      const newUserDiv = document.createElement('div');
+      newUserDiv.id = "user";
+      newUserDiv.innerHTML = `
+      <div class="card">
+      <div class="card-body" id = "profiles">
+        <h5 class="card-title">Profile</h5>
+        <h5 class="card-title">${firstName+lastName}</h5>
+       
+        <h6 class="card-text">${email}</h6>
+        <h5 class="card-text">Skills : ${skills}</h5>
+
+        <h5 class="card-text">Education Details</h5>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Sr.No</th>
+              <th scope="col">Standard</th>
+              <th scope="col">Percentage</th>
+            
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>SSC</td>
+              <td>${ssc}</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>HSC</td>
+              <td>${hsc}</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Graduation</td>
+              <td>${graduation}</td>
+            </tr>
+          </tbody>
+        </table>
+        
+
+      </div>
+    </div>
+     
+  </div>
+      `
+
+
+      test1.appendChild(newUserDiv);
+
+
+   } else {
+
+      userDetailsDiv.style.display = "block";
+      userProfile.style.display = "none";
+
+   }
+}

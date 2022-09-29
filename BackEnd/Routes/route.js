@@ -23,6 +23,7 @@ router.post('/userSignUp', user.userSignUp);
 router.post('/sendUserDetails', user.userDetails);
 router.post('/applyJob', user.applyForJob);
 router.get('/appliedJobs/:id', user.appliedJobs);
-
+router.get('/displayUserDetails/:userId', user.displayUserDetails);
+router.get('/checkUserDetails/:userId',user.checkUserDetails);
 
 module.exports = router;
