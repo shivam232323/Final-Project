@@ -91,7 +91,7 @@ function addJobs(jobs) {
      let date = job_createdAt.slice(0, 10);
      const test1 = document.getElementById('jobs');
      const newDiv = document.createElement('div');
-     newDiv.id = "test";
+     newDiv.id = "test1";
 
      newDiv.innerHTML = `
       <div class="card text-center">

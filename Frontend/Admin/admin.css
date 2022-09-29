@@ -24,7 +24,6 @@ body
   #test
   {
      text-transform: uppercase;
-     border: 1px solid rgb(144, 144, 197);
      width:auto;
      height: 250px;
      background-color:ghostwhite;
@@ -131,10 +130,14 @@ body
   bottom: 55px;
 }
 
-#test
+#test1
 {
-  padding: 2px;
+
+  margin-top: 5px;
+  
 }
+
+
   
   
   
